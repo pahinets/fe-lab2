@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.shapes-wrapper {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.canvas {
+    width: 280px;
+    height: 260px;
+}
+
+.sq {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #000000;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.sq-top {
+    background-color: #c5d1e5;
+}
+
+.sq-left {
+    background-color: #ffff00;
+}
+
+.sq-right {
+    background-color: #d8006c;
+}
+
+/* 1. Спосіб за допомогою position */
+.pos-container {
+    position: relative;
+}
+
+.pos-container .sq-top {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    transform: rotate(45deg);
+}
+
+.pos-container .sq-left {
+    position: absolute;
+    top: 122px;
+    left: 25px;
+    transform: rotate(12deg);
+}
+
+.pos-container .sq-right {
+    position: absolute;
+    top: 122px;
+    left: 155px;
+    transform: rotate(-12deg);
+}
+
+/* 2. Спосіб за допомогою transform */
+.trans-container .sq-top {
+    transform: translate(90px, 20px) rotate(45deg);
+}
+
+.trans-container .sq-left {
+    transform: translate(25px, 22px) rotate(12deg);
+}
+
+.trans-container .sq-right {
+    transform: translate(155px, -78px) rotate(-12deg);
+}
